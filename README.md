@@ -10,3 +10,4 @@
 3) Стек: Kotlin, Retrofit, Hilt, Room, Glide
 
 == Возможны изменения ==
+  
