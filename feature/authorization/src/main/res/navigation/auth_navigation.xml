@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/authorizationFragment">
+
+    <fragment
+        android:id="@+id/authorizationFragment"
+        android:name="com.sabirov.authorization.AuthorizationFragment"
+        android:label="fr_authorization"
+        tools:layout="@layout/fr_authorization">
+        <action android:id="@+id/action_auth_to_main"
+            app:destination="@id/mainFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/auth_nav_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

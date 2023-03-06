@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -35,17 +37,28 @@ android {
     }
 }
 
-dependencies {
+apply from: "$project.rootDir/scripts/deps_versions.gradle"
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.0'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
+dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    implementation kotlinCore
+    implementation appCompat
+    implementation material
+    implementation constraintLayout
+    implementation liveData
+    implementation viewModel
+    implementation navigationFragment
+    implementation navigationUi
+
+    implementation retrofit
+    implementation dagger
+    kapt daggerCompiler
+    implementation project(':resources')
+    implementation project(':feature:home')
+    implementation project(':feature:main')
+    implementation project(':feature:authorization')
+    implementation project(':feature:temp')
 }
