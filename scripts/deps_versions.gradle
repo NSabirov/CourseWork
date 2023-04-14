@@ -1,7 +1,6 @@
 ext {
     retrofitVersion = '2.9.0'
     jsr330Version = '1'
-    daggerVersion = '2.45'
     roomVersion = '2.5.0'
     picassoVersion = '2.8'
     flexLayoutVersion = '1.1.1'
@@ -14,13 +13,13 @@ ext {
     liveDataVersion = '2.5.1'
     viewModelVersion = '2.5.1'
     navigationVersion = '2.5.3'
+    hiltVersion = '2.44'
+    hiltViewModelVersion = "1.0.0-alpha03"
 
     kotlinCore = "androidx.core:core-ktx:$kotlinCoreVersion"
     appCompat = "androidx.appcompat:appcompat:$appCompatVersion"
     retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
     jsr330 = "javax.inject:javax.inject:$jsr330Version"
-    dagger = "com.google.dagger:dagger:$daggerVersion"
-    daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
     room = "androidx.room:room-runtime:$roomVersion"
     roomCompiler = "androidx.room:room-compiler:$roomVersion"
     picasso = "com.squareup.picasso:picasso:$picassoVersion"
@@ -37,4 +36,8 @@ ext {
     viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModelVersion"
     navigationFragment = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     navigationUi = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+    hilt = "com.google.dagger:hilt-android:$hiltVersion"
+    hiltCompiler = "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    hiltViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:$hiltViewModelVersion"
+    hiltViewModelCompiler = "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
 }

@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
+    id 'com.google.dagger.hilt.android'
     id 'kotlin-kapt'
 }
 
@@ -35,6 +36,10 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    packagingOptions {
+        exclude 'META-INF/gradle/incremental.annotation.processors'
+    }
 }
 
 apply from: "$project.rootDir/scripts/deps_versions.gradle"
@@ -54,11 +59,16 @@ dependencies {
     implementation navigationUi
 
     implementation retrofit
-    implementation dagger
-    kapt daggerCompiler
+    implementation hilt
+    kapt hiltCompiler
+    /*implementation hiltViewModel
+    kapt hiltViewModelCompiler*/
     implementation project(':resources')
     implementation project(':feature:home')
-    implementation project(':feature:main')
     implementation project(':feature:authorization')
     implementation project(':feature:temp')
+}
+
+kapt {
+    correctErrorTypes true
 }

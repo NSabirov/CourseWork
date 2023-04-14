@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -49,6 +52,14 @@ dependencies {
     implementation viewModel
     implementation navigationFragment
     implementation navigationUi
+    implementation hilt
+    kapt hiltCompiler
+    /*implementation hiltViewModel
+    kapt hiltViewModelCompiler*/
 
     implementation project(':resources')
+}
+
+kapt {
+    correctErrorTypes true
 }

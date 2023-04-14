@@ -1,21 +1,25 @@
 package com.sabirov.authorization
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
-import androidx.navigation.NavOptions
-import androidx.navigation.fragment.findNavController
-import com.sabirov.authorization.databinding.FrAuthHostBinding
+import androidx.fragment.app.viewModels
+import com.sabirov.AuthNavigation
 import com.sabirov.authorization.databinding.FrAuthorizationBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class AuthorizationFragment : Fragment() {
-
     private var _binding: FrAuthorizationBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel: AuthorizationViewModel by viewModels()
+
+    @Inject
+    lateinit var navigation: AuthNavigation
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,7 +33,7 @@ class AuthorizationFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
             btnAuth.setOnClickListener {
-                findNavController().navigate(R.id.action_auth_to_main, bundleOf("MAIN" to "main"))
+                navigation.navigateToVerification()
             }
         }
     }
