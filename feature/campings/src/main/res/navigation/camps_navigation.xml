@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/camps_nav_graph"
+    app:startDestination="@id/campsFragment">
+
+    <fragment
+        android:id="@+id/campsFragment"
+        android:name="com.sabirov.camps.CampsFragment"
+        android:label="fragment_camps"
+        tools:layout="@layout/fr_camps">
+        <action
+            android:id="@+id/action_campsFragment_to_campInfoFragment"
+            app:destination="@id/campInfoFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"  />
+    </fragment>
+    <fragment
+        android:id="@+id/campInfoFragment"
+        android:name="com.sabirov.create.CampInfoFragment"
+        android:label="fragment_camp_info"
+        tools:layout="@layout/fr_camp_info">
+    </fragment>
+</navigation>

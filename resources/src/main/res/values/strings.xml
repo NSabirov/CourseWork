@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">CourseWork</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+
+    <string name="title_log_in">Вход</string>
+    <string name="title_registration">Регистрация</string>
+    <string name="title_campings">Кемпинги</string>
+    <string name="title_hikes">Походы</string>
+    <string name="title_all_hikes">Все походы</string>
+    <string name="title_my_hikes">Мои походы</string>
+
+    <string name="log_in">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="repassword">Повторите пароль</string>
+    <string name="email">Email</string>
 </resources>

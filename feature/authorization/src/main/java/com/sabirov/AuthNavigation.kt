@@ -1,10 +1,12 @@
 package com.sabirov
 
-interface AuthNavigation{
+interface AuthNavigation {
     fun navigateToMain()
 
     fun navigateToAuth()
 
-    fun navigateToVerification()
+    fun navigateToLogIn()
 
+    fun navigateToRegistration()
+    fun onBackPressed()
 }

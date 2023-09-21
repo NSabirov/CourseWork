@@ -1,42 +1,40 @@
 package com.sabirov.coursework.navigation
 
-import androidx.core.net.toUri
 import androidx.fragment.app.FragmentActivity
-import androidx.navigation.NavDeepLinkRequest
-import androidx.navigation.NavOptions
 import androidx.navigation.fragment.NavHostFragment
+import com.example.core_api.CommonNavigation
 import com.sabirov.AuthNavigation
 import com.sabirov.coursework.MainActivity
 import com.sabirov.coursework.R
 import javax.inject.Inject
 
 class AuthNavImpl @Inject constructor(
-    private val activity: FragmentActivity
+    private val commonNavigation: CommonNavImpl
 ) : AuthNavigation {
 
-    private val navHost: NavHostFragment =
-        activity.supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
-    private val navController = navHost.navController
-
     override fun navigateToMain() {
-        (activity as? MainActivity)?.bottomNavVisible(true)
-        val request = NavDeepLinkRequest.Builder
-            .fromUri("myapp://ex.my.app/home_fragment".toUri())
-            .build()
-        navController.navigate(request, NavOptions.Builder().setPopUpTo(com.sabirov.authorization.R.id.authorizationFragment, true).build())
+        commonNavigation.bottomNavVisible(true)
+        commonNavigation.getController().setGraph(com.sabirov.home.R.navigation.camps_navigation)
     }
 
     override fun navigateToAuth() {
-        (activity as? MainActivity)?.bottomNavVisible(false)
-        val request = NavDeepLinkRequest.Builder
-            .fromUri("myapp://ex.my.app/auth_fragment".toUri())
-            .build()
-        navController.navigate(request)
+        commonNavigation.bottomNavVisible(false)
+        commonNavigation.getController()
+            .setGraph(com.sabirov.authorization.R.navigation.auth_navigation)
     }
 
-    override fun navigateToVerification() {
-        (activity as? MainActivity)?.bottomNavVisible(false)
-        navController.navigate(com.sabirov.authorization.R.id.action_authorizationFragment_to_verificationFragment)
+    override fun navigateToLogIn() {
+        commonNavigation.bottomNavVisible(false)
+        commonNavigation.getController()
+            .navigate(com.sabirov.authorization.R.id.action_authorizationFragment_to_logInFragment)
     }
 
+    override fun navigateToRegistration() {
+        commonNavigation.getController()
+            .navigate(com.sabirov.authorization.R.id.action_authorizationFragment_to_registrationFragment)
+    }
+
+    override fun onBackPressed() {
+        commonNavigation.onBackPressed()
+    }
 }

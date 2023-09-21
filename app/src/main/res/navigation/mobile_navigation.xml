@@ -6,6 +6,6 @@
     app:startDestination="@id/auth_nav_graph">
 
     <include app:graph="@navigation/auth_navigation"/>
-    <include app:graph="@navigation/home_navigation" />
-    <include app:graph="@navigation/temp_navigation"/>
+    <include app:graph="@navigation/camps_navigation" />
+    <include app:graph="@navigation/hike_navigation"/>
 </navigation>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.example.core_api.database.CampingsDao
 import com.sabirov.AuthNavigation
 import com.sabirov.authorization.databinding.FrAuthorizationBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -32,8 +33,11 @@ class AuthorizationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            btnAuth.setOnClickListener {
-                navigation.navigateToVerification()
+            btnLogIn.setOnClickListener {
+                navigation.navigateToLogIn()
+            }
+            btnRegistration.setOnClickListener {
+                navigation.navigateToRegistration()
             }
         }
     }

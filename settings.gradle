@@ -15,6 +15,9 @@ dependencyResolutionManagement {
 rootProject.name = "CourseWork"
 include ':app'
 include ':resources'
-include ':feature:home'
+include ':feature:campings'
 include ':feature:authorization'
-include ':feature:temp'
+include ':feature:hikes'
+include ':source:core_api'
+include ':source:core'
+include ':source:core_impl'

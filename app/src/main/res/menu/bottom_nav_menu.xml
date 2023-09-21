@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@id/home_nav_graph"
+        android:id="@id/camps_nav_graph"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:menuCategory="container"
+        android:title="@string/title_campings" />
     <item
-        android:id="@id/temp_nav_graph"
+        android:id="@id/hike_nav_graph"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:menuCategory="container"
+        android:title="@string/title_hikes" />
 </menu>

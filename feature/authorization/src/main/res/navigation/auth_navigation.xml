@@ -10,18 +10,31 @@
         android:name="com.sabirov.authorization.AuthorizationFragment"
         android:label="fr_authorization"
         tools:layout="@layout/fr_authorization">
-        <deepLink app:uri="myapp://ex.my.app/auth_fragment"/>
         <action
-            android:id="@+id/action_authorizationFragment_to_verificationFragment"
-            app:destination="@id/verificationFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
+            android:id="@+id/action_authorizationFragment_to_logInFragment"
+            app:destination="@id/logInFragment"
+            app:enterAnim="@anim/enter_from_right"
             app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popEnterAnim="@anim/enter_from_left"
             app:popExitAnim="@anim/nav_default_pop_exit_anim" />
-
+        <action
+            android:id="@+id/action_authorizationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
+
     <fragment
-        android:id="@+id/verificationFragment"
-        android:name="com.sabirov.verification.VerificationFragment"
-        android:label="VerificationFragment" />
+        android:id="@+id/logInFragment"
+        android:name="com.sabirov.logIn.LogInFragment"
+        android:label="LogInFragment"
+        tools:layout="@layout/fr_log_in" />
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.sabirov.registration.RegistrationFragment"
+        android:label="registrationFragment"
+        tools:layout="@layout/fr_registration" />
 </navigation>

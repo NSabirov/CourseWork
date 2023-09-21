@@ -1,18 +1,18 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android-extensions'
+    id 'kotlin-parcelize'
     id 'com.google.dagger.hilt.android'
     id 'kotlin-kapt'
 }
 
 android {
     namespace 'com.sabirov.authorization'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 24
-        targetSdk 33
+        targetSdk 34
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -25,11 +25,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
     buildFeatures {
         viewBinding true
@@ -55,10 +55,9 @@ dependencies {
     implementation navigationUi
     implementation hilt
     kapt hiltCompiler
-    /*implementation hiltViewModel
-    kapt hiltViewModelCompiler*/
 
     implementation project(':resources')
+    implementation project(':source:core')
 }
 
 kapt {
