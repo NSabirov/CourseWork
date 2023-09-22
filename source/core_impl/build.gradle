@@ -53,5 +53,5 @@ dependencies {
     kapt hiltCompiler
     kapt roomCompiler
 
-    implementation project(':source:core_api')
+    api project(':source:core_api')
 }

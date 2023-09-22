@@ -51,5 +51,6 @@ dependencies {
     implementation navigationUi
 
     implementation project(':resources')
-    //implementation project(':core')
+    implementation project(':source:utils')
+    implementation project(':source:core_impl')
 }

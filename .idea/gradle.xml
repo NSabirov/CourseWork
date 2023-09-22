@@ -17,9 +17,9 @@
             <option value="$PROJECT_DIR$/feature/hikes" />
             <option value="$PROJECT_DIR$/resources" />
             <option value="$PROJECT_DIR$/source" />
-            <option value="$PROJECT_DIR$/source/core" />
             <option value="$PROJECT_DIR$/source/core_api" />
             <option value="$PROJECT_DIR$/source/core_impl" />
+            <option value="$PROJECT_DIR$/source/utils" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -62,7 +62,8 @@ dependencies {
     implementation hilt
     kapt hiltCompiler
 
-    implementation project(':source:core')
+    implementation project(':source:utils')
+    implementation project(':source:core_impl')
     implementation project(':resources')
     implementation project(':feature:campings')
     implementation project(':feature:authorization')

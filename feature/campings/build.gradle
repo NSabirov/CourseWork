@@ -56,7 +56,8 @@ dependencies {
     kapt hiltCompiler
 
     implementation project(':resources')
-    implementation project(':source::core')
+    implementation project(':source:utils')
+    implementation project(':source:core_impl')
 }
 
 kapt {
