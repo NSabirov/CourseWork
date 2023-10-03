@@ -33,6 +33,7 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
+
     buildFeatures {
         viewBinding true
     }
@@ -40,9 +41,27 @@ android {
     packagingOptions {
         exclude 'META-INF/gradle/incremental.annotation.processors'
     }
+
+    buildTypes {
+        debug {
+            //signingConfig signingConfigs.config
+            debuggable true
+            testCoverageEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            //signingConfig signingConfigs.config
+            debuggable true
+            testCoverageEnabled false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
 apply from: "$project.rootDir/scripts/deps_versions.gradle"
+apply from: "../app/flavors.gradle"
 
 dependencies {
     testImplementation 'junit:junit:4.13.2'
@@ -59,6 +78,7 @@ dependencies {
     implementation navigationUi
 
     implementation retrofit
+    implementation retrofitConverter
     implementation hilt
     kapt hiltCompiler
 
@@ -68,6 +88,7 @@ dependencies {
     implementation project(':feature:campings')
     implementation project(':feature:authorization')
     implementation project(':feature:hikes')
+    implementation project(':feature:profile')
 }
 
 kapt {

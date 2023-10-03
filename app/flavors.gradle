@@ -1,0 +1,31 @@
+android {
+    flavorDimensions 'environment'
+    productFlavors {
+        develop {
+            dimension = 'environment'
+            buildConfigField(
+                    "String",
+                    "BASE_URL",
+                    "\"https://10.0.2.2:7110\""
+            )
+            buildConfigField(
+                    "String",
+                    "ENVIRONMENT_VALUE",
+                    "\"dev\""
+            )
+        }
+        production {
+            dimension = 'environment'
+            buildConfigField(
+                    "String",
+                    "BASE_URL",
+                    "\"https://10.0.2.2:7110\""
+            )
+            buildConfigField(
+                    "String",
+                    "ENVIRONMENT_VALUE",
+                    "\"prod\""
+            )
+        }
+    }
+}

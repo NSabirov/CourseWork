@@ -1,30 +1,35 @@
 ext {
     retrofitVersion = '2.9.0'
+    okhttpVersion = '5.0.0-alpha.3'
     jsr330Version = '1'
-    roomVersion = '2.5.0'
     picassoVersion = '2.8'
     flexLayoutVersion = '1.1.1'
     viewPager2Version = '1.0.0-rc01'
     coroutinesVersion = '1.6.4'
-    materialVersion = '1.11.0-alpha02'
+    materialVersion = '1.11.0-alpha03'
     kotlinCoreVersion = '1.12.0'
     appCompatVersion = '1.6.1'
     constraintLayoutVersion = '2.1.4'
     liveDataVersion = '2.6.2'
     viewModelVersion = '2.6.2'
-    navigationVersion = '2.7.2'
+    navigationVersion = '2.7.3'
     hiltVersion = '2.48'
     hiltViewModelVersion = "1.0.0-alpha03"
     legacyVersion = "1.0.0"
+    dataBindingVersion = "3.2.0-alpha11"
+    swipeRefreshLayoutVersion = "1.1.0"
+    glideVersion = "4.15.0"
+    shimmerVersion = "0.5.0"
+    phoneMaskVersion = "1.0.5"
 
-    legacy ="androidx.legacy:legacy-support-v4:$legacyVersion"
+    legacy = "androidx.legacy:legacy-support-v4:$legacyVersion"
     kotlinCore = "androidx.core:core-ktx:$kotlinCoreVersion"
     appCompat = "androidx.appcompat:appcompat:$appCompatVersion"
     retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    retrofitConverter = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    okhttp = "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    okhttpLogging = "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
     jsr330 = "javax.inject:javax.inject:$jsr330Version"
-    room = "androidx.room:room-runtime:$roomVersion"
-    roomKtx = "androidx.room:room-ktx:$roomVersion"
-    roomCompiler = "androidx.room:room-compiler:$roomVersion"
     picasso = "com.squareup.picasso:picasso:$picassoVersion"
     flexLayout = "com.google.android:flexbox:$flexLayoutVersion"
     viewPager2 = "androidx.viewpager2:viewpager2:$viewPager2Version"
@@ -43,4 +48,11 @@ ext {
     hiltCompiler = "com.google.dagger:hilt-android-compiler:$hiltVersion"
     hiltViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:$hiltViewModelVersion"
     hiltViewModelCompiler = "androidx.hilt:hilt-compiler:$hiltViewModelVersion"
+    dataBinding = "androidx.databinding:baseLibrary:$dataBindingVersion"
+    swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefreshLayoutVersion"
+    glide = "com.github.bumptech.glide:glide:$glideVersion"
+    glideCompiler = "com.github.bumptech.glide:compiler:$glideVersion"
+    glideOkhttp = "com.github.bumptech.glide:okhttp3-integration:$glideVersion"
+    shimmer = "com.facebook.shimmer:shimmer:$shimmerVersion"
+    phoneMask = "ru.egslava:MaskedEditText:$phoneMaskVersion"
 }

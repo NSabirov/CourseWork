@@ -37,4 +37,13 @@
         android:name="com.sabirov.registration.RegistrationFragment"
         android:label="registrationFragment"
         tools:layout="@layout/fr_registration" />
+
+    <action android:id="@+id/action_authFragment_to_campsFragment"
+        app:destination="@id/camps_nav_graph"
+        app:popUpTo="@id/auth_nav_graph"
+        app:popUpToInclusive="true"
+        app:enterAnim="@anim/enter_from_right"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/enter_from_left"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
 </navigation>

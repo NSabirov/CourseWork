@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile_nav_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sabirov.profile.ProfileFragment"
+        android:label="fr_profile"
+        tools:layout="@layout/fr_profile"/>
+
+    <action android:id="@+id/action_profileFragment_to_authFragment"
+        app:destination="@id/auth_nav_graph"
+        app:enterAnim="@anim/enter_from_right"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/enter_from_left"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@id/auth_nav_graph"/>
+</navigation>

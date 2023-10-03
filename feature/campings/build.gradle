@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace 'com.sabirov.home'
+    namespace 'com.sabirov.campings'
     compileSdk 34
 
     defaultConfig {
@@ -53,6 +53,11 @@ dependencies {
     implementation navigationFragment
     implementation navigationUi
     implementation hilt
+    implementation glide
+    implementation glideOkhttp
+    implementation shimmer
+
+    kapt glideCompiler
     kapt hiltCompiler
 
     implementation project(':resources')

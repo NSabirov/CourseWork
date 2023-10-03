@@ -1,10 +1,13 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
 }
 
 android {
-    namespace 'com.sabirov.temp'
+    namespace 'com.sabirov.hikes'
     compileSdk 34
 
     defaultConfig {
@@ -41,6 +44,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    implementation legacy
     implementation kotlinCore
     implementation appCompat
     implementation material
@@ -49,6 +53,14 @@ dependencies {
     implementation viewModel
     implementation navigationFragment
     implementation navigationUi
+    implementation hilt
+    implementation glide
+    implementation glideOkhttp
+    implementation shimmer
+
+    kapt glideCompiler
+    kapt hiltCompiler
+
 
     implementation project(':resources')
     implementation project(':source:utils')

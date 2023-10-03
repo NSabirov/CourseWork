@@ -8,5 +8,5 @@ interface AuthNavigation {
     fun navigateToLogIn()
 
     fun navigateToRegistration()
-    fun onBackPressed()
+    fun onBackPressed(isVisible: Boolean)
 }

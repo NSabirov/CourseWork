@@ -1,4 +1,4 @@
-package com.example.core_impl
+package com.sabirov.core_impl
 
 import org.junit.Test
 

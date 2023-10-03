@@ -1,5 +1,5 @@
-
 <resources>
+
     <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/md_theme_light_primary</item>
         <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
@@ -16,7 +16,8 @@
         <item name="colorSecondaryFixed">@color/md_theme_light_secondaryFixed</item>
         <item name="colorOnSecondaryFixed">@color/md_theme_light_onSecondaryFixed</item>
         <item name="colorSecondaryFixedDim">@color/md_theme_light_secondaryFixedDim</item>
-        <item name="colorOnSecondaryFixedVariant">@color/md_theme_light_onSecondaryFixedVariant</item>
+        <item name="colorOnSecondaryFixedVariant">@color/md_theme_light_onSecondaryFixedVariant
+        </item>
         <item name="colorTertiary">@color/md_theme_light_tertiary</item>
         <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
         <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
@@ -38,7 +39,8 @@
         <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
         <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
         <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
-        <item name="colorSurfaceContainerHighest">@color/md_theme_light_surfaceContainerHighest</item>
+        <item name="colorSurfaceContainerHighest">@color/md_theme_light_surfaceContainerHighest
+        </item>
         <item name="colorSurfaceContainerHigh">@color/md_theme_light_surfaceContainerHigh</item>
         <item name="colorSurfaceContainer">@color/md_theme_light_surfaceContainer</item>
         <item name="colorSurfaceContainerLow">@color/md_theme_light_surfaceContainerLow</item>
@@ -48,10 +50,14 @@
         <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
     </style>
 
-    <style name="Button" parent="Widget.Material3.Button">
-    </style>
+    <style name="Button" parent="Widget.Material3.Button"></style>
 
-    <style name="Button.Outlined" parent="Widget.Material3.Button.OutlinedButton"/>
+    <style name="Button.Outlined" parent="Widget.Material3.Button.OutlinedButton" />
+
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
 
     <!--Typography-->
     <style name="Title1">
@@ -91,7 +97,6 @@
     </style>
 
     <style name="Title3">
-        <item name="android:textColor">@color/md_theme_light_onPrimary</item>
         <item name="android:textSize">22sp</item>
         <item name="lineHeight">26dp</item>
         <item name="android:letterSpacing">0.033</item>

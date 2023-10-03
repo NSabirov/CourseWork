@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@id/camps_nav_graph"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_round_home_24"
         android:menuCategory="container"
         android:title="@string/title_campings" />
     <item
         android:id="@id/hike_nav_graph"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/ic_round_nordic_walking_24"
         android:menuCategory="container"
         android:title="@string/title_hikes" />
 </menu>

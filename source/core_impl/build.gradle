@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.core_impl'
+    namespace 'com.sabirov.core_impl'
     compileSdk 34
 
     defaultConfig {
@@ -15,12 +15,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
-
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
-            }
-        }
     }
 
     buildTypes {
@@ -42,16 +36,16 @@ apply from: "$project.rootDir/scripts/deps_versions.gradle"
 dependencies {
     implementation kotlinCore
     implementation hilt
-    implementation room
-    implementation roomKtx
-    kapt roomCompiler
+    implementation retrofit
+    implementation retrofitConverter
+    implementation okhttp
+    implementation okhttpLogging
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     kapt hiltCompiler
-    kapt roomCompiler
 
     api project(':source:core_api')
 }

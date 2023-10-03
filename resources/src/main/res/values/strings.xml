@@ -4,12 +4,31 @@
     <string name="title_log_in">Вход</string>
     <string name="title_registration">Регистрация</string>
     <string name="title_campings">Кемпинги</string>
+    <string name="title_camping">Кемпинг</string>
     <string name="title_hikes">Походы</string>
     <string name="title_all_hikes">Все походы</string>
     <string name="title_my_hikes">Мои походы</string>
+    <string name="title_profile">Профиль</string>
+    <string name="title_hello">Здравствуйте!</string>
+    <string name="title_hello_s">Здравствуйте!%s</string>
+    <string name="title_short_info">Краткая информация</string>
+    <string name="title_participants">Участники</string>
+    <string name="title_loading">Загрузка…</string>
+    <string name="title_processing">В обработке</string>
+    <string name="title_boss">Организатор:</string>
+
+    <string name="text_placeholder">%s</string>
 
     <string name="log_in">Логин</string>
     <string name="password">Пароль</string>
     <string name="repassword">Повторите пароль</string>
     <string name="email">Email</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="patronymic">Отчество</string>
+    <string name="phone">Телефон</string>
+    <string name="exit">Выход</string>
+
+    <string name="wrong_email">Электронная почта введена некорректно</string>
+    <string name="wrong_phone">Некорректный номер телефона</string>
 </resources>

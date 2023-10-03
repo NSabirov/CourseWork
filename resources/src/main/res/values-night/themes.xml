@@ -1,5 +1,5 @@
-
 <resources>
+
     <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
@@ -16,7 +16,8 @@
         <item name="colorSecondaryFixed">@color/md_theme_dark_secondaryFixed</item>
         <item name="colorOnSecondaryFixed">@color/md_theme_dark_onSecondaryFixed</item>
         <item name="colorSecondaryFixedDim">@color/md_theme_dark_secondaryFixedDim</item>
-        <item name="colorOnSecondaryFixedVariant">@color/md_theme_dark_onSecondaryFixedVariant</item>
+        <item name="colorOnSecondaryFixedVariant">@color/md_theme_dark_onSecondaryFixedVariant
+        </item>
         <item name="colorTertiary">@color/md_theme_dark_tertiary</item>
         <item name="colorOnTertiary">@color/md_theme_dark_onTertiary</item>
         <item name="colorTertiaryContainer">@color/md_theme_dark_tertiaryContainer</item>
@@ -38,7 +39,8 @@
         <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
         <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
         <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
-        <item name="colorSurfaceContainerHighest">@color/md_theme_dark_surfaceContainerHighest</item>
+        <item name="colorSurfaceContainerHighest">@color/md_theme_dark_surfaceContainerHighest
+        </item>
         <item name="colorSurfaceContainerHigh">@color/md_theme_dark_surfaceContainerHigh</item>
         <item name="colorSurfaceContainer">@color/md_theme_dark_surfaceContainer</item>
         <item name="colorSurfaceContainerLow">@color/md_theme_dark_surfaceContainerLow</item>
